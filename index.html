@@ -1,0 +1,74 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="utf-8">
+    <title>Hsmynewapp</title>
+    <base href="/">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@vime/core@^5/themes/default.css">
+    <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet">
+<style>@import"https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap";@import"https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap";:root{--first-color:#000000;--text-color:#121212;--text-color-white:#f4f4f4;--text-color-dark-3:#bfbfbf;--active-color:#f4f4f4;--second-color:#595959;--second-dark-color:#313030;--warm-color:#EC3B27;--white-color:#FFF;--back-ground-color:#f4f4f4;--bg-mylearning-color:#f4f4f4;--course-title-darker:#470bfa;--course-title-lighter:#b399ff;--course-back-ground-dark:rgba(123, 107, 136, .15) 0px 19px 60px, rgba(104, 93, 112, .15) 0px 10px 40px;--course-detail-tile:#1B1B1B;--course-detail-btn-bg:#b399ff;--course-detail-btn-paid:#f537cc;--section-header-bg:#b399ff;--section-body-text:#1B1B1B;--section-vl:#1B1B1B;--section-btn:#1B1B1B;--section-btn-bg:#470bfa;--help-bodt-text:#484848;--landing-page-text:#470bfa;--body-font:"Poppins", sans-serif;--pricing-font:"Poppins", sans-serif;--biggest-font-size:1.75rem;--normal-font-size:.938rem;--h2-font-size:1.25rem;--small-font-size:.813rem;--smaller-font-size:.75rem;--tiny-font-size:.625rem;--biggest-font-size:2.125rem;--h2-font-size:1.5rem;--normal-font-size:1rem;--small-font-size:.875rem;--smaller-font-size:.813rem;--tiny-font-size:.688rem;--mb-0-25:.25rem;--mb-0-5:.5rem;--mb-1:1rem;--mb-1-25:1.25rem;--mb-1-5:1.5rem;--mb-2:2rem;--showw-logo-display:none;--showw-logo-visibility:hidden;--showb-logo-display:block;--showb-logo-visibility:visible;--svg-white:#f4f4f4}*{box-sizing:border-box;padding:0;margin:0}body{font-family:var(--body-font);font-size:var(--normal-font-size);background:#1B1B1B;color:var(--text-color)}body:not(.dark-mode-preloading){transition:all .3s linear}</style><link rel="stylesheet" href="styles.533ac4ae6847ae4b.css" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="styles.533ac4ae6847ae4b.css"></noscript></head>
+
+<body>
+    <app-root></app-root>
+
+
+    <script src="https://www.paypal.com/sdk/js?client-id=AaP9qxkWL57ybRenJKBx9fL2rSk6mAjqFWmSyrS0k0sHdi-I5gx7voI1vXp008GZOuo0TCeq8lIhqKMv">
+        // Replace YOUR_CLIENT_ID with your sandbox client ID
+    </script>
+
+    <script src="https://unpkg.com/boxicons@2.1.2/dist/boxicons.js"></script>
+
+    <!-- <script>
+        // Render the PayPal button into #paypal-button-container
+        paypal.Buttons({
+
+            // Set up the transaction
+            createOrder: function(data, actions) {
+                // return actions.order.create({
+                //     purchase_units: [{
+                //         amount: {
+                //             value: '88.44'
+                //         }
+                //     }]
+                // });
+                var CREATE_PAYMENT_URL = 'http://localhost:4000/payments';
+
+                return fetch(CREATE_PAYMENT_URL, {
+                    method: 'post',
+                    headers: {
+                        'content-type': 'application/json',
+                    }
+                }).then(function(res) {
+                    console.log('res', res)
+                    return res.json();
+                }).then(function(data) {
+                    console.log('data', data)
+                    return data.token;
+                });
+
+
+            },
+
+            // Finalize the transaction
+            onApprove: function(data, actions) {
+                return actions.order.capture().then(function(orderData) {
+                    // Successful capture! For demo purposes:
+                    console.log('Capture result', orderData, JSON.stringify(orderData, null, 2));
+                    var transaction = orderData.purchase_units[0].payments.captures[0];
+                    alert('Transaction ' + transaction.status + ': ' + transaction.id + '\n\nSee console for all available details');
+
+                    // Replace the above to show a success message within this page, e.g.
+                    // const element = document.getElementById('paypal-button-container');
+                    // element.innerHTML = '';
+                    // element.innerHTML = '<h3>Thank you for your payment!</h3>';
+                    // Or go to another URL:  actions.redirect('thank_you.html');
+                });
+            }
+
+
+        }).render('#paypal-button-container');
+    </script> -->
+<script src="runtime.ab2b81945e23be5f.js" type="module"></script><script src="polyfills.dc5630c2b2f019da.js" type="module"></script><script src="scripts.f8f90d17b1b8b0dd.js" defer></script><script src="main.7fa138c4ba022cfc.js" type="module"></script>
+
+</body></html>
